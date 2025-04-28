@@ -26,3 +26,9 @@ def create_fault_tolerant_query(result_df, output_mode="update", checkpoint_dir=
             .option("checkpointLocation", checkpoint_dir)
             .trigger(processingTime=trigger_interval)
             .queryName(query_name or "default_query"))
+def with_fault_tolerance(result_df, sink_function, query_name=None):
+    """
+    Wrap a sink_function with default checkpointing and streaming trigger configs.
+    """
+    query = sink_function(result_df)
+    return query

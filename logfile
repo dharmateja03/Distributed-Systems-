@@ -1,0 +1,2 @@
+2025-04-27 22:54:25.164 EDT [47522] FATAL:  lock file "postmaster.pid" already exists
+2025-04-27 22:54:25.164 EDT [47522] HINT:  Is another postmaster (PID 47506) running in data directory "/opt/homebrew/var/postgresql@14"?

@@ -1,0 +1,73 @@
+# ------------------------------
+# Python
+# ------------------------------
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv/
+*.egg-info/
+pip-wheel-metadata/
+
+# Jupyter Notebook checkpoints (if any)
+.ipynb_checkpoints/
+
+# ------------------------------
+# Spark / Checkpoints / Logs
+# ------------------------------
+checkpoint/
+spark-warehouse/
+derby.log
+*.log
+
+# ------------------------------
+# Kafka and Docker
+# ------------------------------
+# Kafka topic logs (if any local ones)
+kafka-logs/
+zookeeper-logs/
+# Docker artifacts
+*.pid
+
+# ------------------------------
+# OS / Editor junk files
+# ------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------
+# Project-specific generated files
+# ------------------------------
+# Market event JSON dumps (if any)
+market_data_json_*.json
+# Matplotlib figures
+*.png
+*.jpg
+# Temporary output files
+*.out
+*.tmp
+
+# ------------------------------
+# Database files (PostgreSQL)
+# ------------------------------
+*.sql
+*.db
+*.sqlite
+
+# ------------------------------
+# Other
+# ------------------------------
+# IntelliJ / PyCharm / VSCode configs (optional)
+.idea/
+.vscode/
+
+# Miscellaneous
+*.bak
+*.swp
+*.swo
+

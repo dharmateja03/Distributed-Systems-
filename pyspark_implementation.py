@@ -32,6 +32,10 @@ from threading import Thread
 from fault_tolerance import configure_checkpointing, create_fault_tolerant_query
 from fault_tolerance import configure_checkpointing, create_fault_tolerant_query
 from output_sinks import StreamingOutputSink
+from kafka_config import KAFKA_BOOTSTRAP_SERVERS, KAFKA_TOPIC
+from utils import create_spark_session, read_stream_from_kafka
+from pyspark.sql.functions import window
+from pyspark.sql.functions import expr
 
 # Create Spark Session with specific configurations for local testing
 # Add this function to pyspark_implementation.py, replacing or alongside the existing create_spark_session function
@@ -584,6 +588,8 @@ def main():
     
     # Create Spark session
     spark = create_spark_session()
+    # Read stream from Kafka
+    
     
     # Configure checkpointing
     checkpoint_dir = configure_checkpointing(spark)
